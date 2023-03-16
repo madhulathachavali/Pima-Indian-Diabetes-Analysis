@@ -30,8 +30,13 @@ The Decision Tree classifier showed the best performance among all the models, a
 
 The confusion matrix below provides an overview of the predictions:
 
+
 True Positive (observed=1, predicted=1): 66
+
 False Positive (observed=0, predicted=1): 24
+
 True Negative (observed=0, predicted=0): 122
+
 False Negative (observed=1, predicted=0): 19
+
 A true positive means that the model correctly predicted that the patient has diabetes. A false positive means that the model predicted that the patient has diabetes, but in reality, the patient does not have it. A true negative means that the model correctly predicted that the patient does not have diabetes. A false negative means that the model predicted that the patient does not have diabetes, but in reality, the patient does have it.
