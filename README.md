@@ -5,13 +5,21 @@ Pima Indian Diabetes Analysis This dataset is taken from National Institute of D
 ### Data Information
 
 Pregnancies: No of times pregnant
+
 Glucose: Glucose concentration a 2 hours in an oral glucose tolerance test
+
 BloodPressure: blood pressure (mm Hg)
+
 SkinThickness: skin fold thickness (mm)
+
 Insulin: 2-Hour serum insulin (mu U/ml)
+
 BMI: weight in kg/(height in m)^2
+
 DiabetesPedigreeFunction: pedigree function
+
 Age: Age (years)
+
 Outcome: variable (0 or 1) 268 of 768 are 1, the others are 0
 
 ### Conclusion
