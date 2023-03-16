@@ -24,7 +24,7 @@ Outcome: variable (0 or 1) 268 of 768 are 1, the others are 0
 
 ### Conclusion
 
-The features of Glucose, BMI, and age provide the most relevant information to distinguish between the true and false classes.
+Glucose, BMI, and age provide the most relevant information to distinguish between the true and false classes.
 
 The Decision Tree classifier showed the best performance among all the models, achieving a model score of 76% on the training data and 81% on the test data. The model can predict with 78% precision whether a patient has diabetes, with a 73% recall and 75% F1 score. Similarly, it can predict with 84% precision whether a patient does not have diabetes, with an 87% recall and 85% F1 score.
 
