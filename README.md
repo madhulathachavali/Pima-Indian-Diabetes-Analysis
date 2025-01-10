@@ -1,42 +1,51 @@
-# Pima-Indian-Diabetes-Analysis
+# Pima Indian Diabetes Analysis
 
-Pima Indian Diabetes Analysis This dataset is taken from National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the analysis is to predict whether the patient has diabetes or not based on the measurements given in the dataset. All the patients are females above 21 years old and belong to Pima Indian heritage.
+This project uses the [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) from the National Institute of Diabetes and Digestive and Kidney Diseases. The goal is to predict whether a patient has diabetes or not based on various diagnostic measurements. All the patients are females above 21 years old and are of Pima Indian heritage.
 
-### Data Information
+---
 
-Pregnancies: No of times pregnant
+## Data Information
 
-Glucose: Glucose concentration a 2 hours in an oral glucose tolerance test
+| Feature                  | Description                                                        |
+|--------------------------|--------------------------------------------------------------------|
+| **Pregnancies**          | Number of times pregnant                                          |
+| **Glucose**              | Glucose concentration 2 hours into an oral glucose tolerance test |
+| **BloodPressure**        | Blood pressure (mm Hg)                                            |
+| **SkinThickness**        | Skin fold thickness (mm)                                          |
+| **Insulin**              | 2-Hour serum insulin (mu U/ml)                                    |
+| **BMI**                  | Weight (kg) / [Height (m)]²                                       |
+| **DiabetesPedigreeFunction** | Diabetes pedigree function (a function which scores likelihood of diabetes based on family history) |
+| **Age**                  | Age (years)                                                        |
+| **Outcome**              | Diabetes indicator (0 = No, 1 = Yes); 268 of 768 are “1”          |
 
-BloodPressure: blood pressure (mm Hg)
+---
 
-SkinThickness: skin fold thickness (mm)
+## Confusion Matrix
 
-Insulin: 2-Hour serum insulin (mu U/ml)
+|                     | Predicted = 1 | Predicted = 0 |
+|---------------------|--------------:|--------------:|
+| **Actual = 1**      | 66 (TP)       | 19 (FN)       |
+| **Actual = 0**      | 24 (FP)       | 122 (TN)      |
 
-BMI: weight in kg/(height in m)^2
+- **True Positive (TP)**: Model correctly predicts diabetes.  
+- **False Positive (FP)**: Model predicts diabetes, but the patient does not have it.  
+- **True Negative (TN)**: Model correctly predicts no diabetes.  
+- **False Negative (FN)**: Model predicts no diabetes, but the patient actually has it.
 
-DiabetesPedigreeFunction: pedigree function
+---
 
-Age: Age (years)
+## Conclusion
 
-Outcome: variable (0 or 1) 268 of 768 are 1, the others are 0
+- **Glucose**, **BMI**, and **Age** provide the most relevant information for distinguishing between patients with and without diabetes.
+- Among the various machine learning models evaluated, the **Decision Tree** classifier delivered the best performance:
+  - **Model Accuracy**: 
+    - 76% on training data  
+    - 81% on test data
+  - **Precision (diabetes = 1)**: 78%  
+    **Recall (diabetes = 1)**: 73%  
+    **F1 Score (diabetes = 1)**: 75%
+  - **Precision (diabetes = 0)**: 84%  
+    **Recall (diabetes = 0)**: 87%  
+    **F1 Score (diabetes = 0)**: 85%
 
-### Conclusion
-
-Glucose, BMI, and age provide the most relevant information to distinguish between the true and false classes.
-
-The Decision Tree classifier showed the best performance among all the models, achieving a model score of 76% on the training data and 81% on the test data. The model can predict with 78% precision whether a patient has diabetes, with a 73% recall and 75% F1 score. Similarly, it can predict with 84% precision whether a patient does not have diabetes, with an 87% recall and 85% F1 score.
-
-The confusion matrix below provides an overview of the predictions:
-
-
-True Positive (observed=1, predicted=1): 66
-
-False Positive (observed=0, predicted=1): 24
-
-True Negative (observed=0, predicted=0): 122
-
-False Negative (observed=1, predicted=0): 19
-
-A true positive means that the model correctly predicted that the patient has diabetes. A false positive means that the model predicted that the patient has diabetes, but in reality, the patient does not have it. A true negative means that the model correctly predicted that the patient does not have diabetes. A false negative means that the model predicted that the patient does not have diabetes, but in reality, the patient does have it.
+---
